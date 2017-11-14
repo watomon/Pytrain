@@ -14,6 +14,8 @@ def AND(x1,x2):
         print(0)
     elif tmp > theta:
         print(1)
+
+
 #それ以外の、NANDゲート、ORゲート、NORゲートの実装
 
 #NAND gate
@@ -24,6 +26,7 @@ def NAND(x1,x2):
         print(1)
     elif tmp > theta:
         print(0)
+
 #OR gate
 def OR(x1,x2):
     w1,w2,theta = 0.5,0.5,0.7
@@ -32,6 +35,7 @@ def OR(x1,x2):
         print(1)
     elif tmp < 0.5:
         print(0)
+
 #NOR gate
 def NOR(x1,x2):
     w1,w2,theta = 0.5,0.5,0.7
@@ -52,6 +56,7 @@ AND(1,0)
 print("(1,1)")
 AND(1,1)
 
+#NAND-GATE
 print("NAND - GATE")
 print("(0,0)")
 NAND(0,0)
@@ -62,6 +67,7 @@ NAND(1,0)
 print("(1,1)")
 NAND(1,1)
 
+#OR-GATE
 print("OR - GATE")
 print("(0,0)")
 OR(0,0)
@@ -72,6 +78,7 @@ OR(1,0)
 print("(1,1)")
 OR(1,1)
 
+#NOR-GATE
 print("NOR - GATE")
 print("(0,0)")
 NOR(0,0)
