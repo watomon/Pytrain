@@ -88,3 +88,16 @@ print("(1,0)")
 NOR(1,0)
 print("(1,1)")
 NOR(1,1)
+
+
+#XOR関数
+def XOR(x1,x2):
+    s1 = NAND(x1,x2)
+    s2 = OR(x1,x2)
+    y = AND(s1,s2)
+    print("y = " + y)
+
+XOR(0,0)
+XOR(0,1)
+XOR(1,0)
+XOR(1,1)
