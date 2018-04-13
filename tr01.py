@@ -10,3 +10,5 @@ y = np.sin(x)
 #グラフの描写
 plt.plot(x, y)
 plt.show()
+
+#2018/04/13 テスト変更
