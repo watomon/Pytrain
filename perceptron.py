@@ -24,3 +24,21 @@ plt.show()
 #重みとバイアスの初期化
 w = np.zeros(d)
 b = 0
+
+while(classfication):
+    classfication *=
+
+#ステップ関数（入力が０以上であれば１を返す関数）
+def step(x):
+    return 1 * (x > 0)
+
+#現在の重みとバイアスを基に出力を返す
+def y(x):
+    return step(np.dot(w * x) + b)
+
+#正しく分類分けできるか　ここでは１０個分ければおk
+def t(i):
+    if i > N :
+        return 0
+    else :
+        return 1
