@@ -9,6 +9,8 @@ print("データの型",type(it))
 print("chainメソッドの場合")
 for i in it:
     print(i)
+print("\n")
+
 
 #zip_longestメソッドで要素同士を結合する
 it = itertools.zip_longest(index, season)
@@ -16,6 +18,7 @@ print("データの型",type(it))
 print("zip_longestメソッドの場合")
 for i in it:
     print(i)
+print("\n")
 
 
 #isliceメソッドで0~10未満までの整数要素を２つおきに抽出
@@ -24,7 +27,7 @@ print("データの型",type(it))
 print("isliceメソッドの場合")
 for i in it:
     print(i)
-
+print("\n")
 
 #イテレータを複製することができるメソッド
 it = itertools.islice(itertools.count(), 3)
@@ -34,9 +37,34 @@ print("teeメソッドの場合")
 
 for i in it1:
     print('it1:' + str(i))
-
 for i in it2:
     print('it2:' + str(i))
+print("\n")
+
+#自分でクラスを作成して、イテレータの実装を行う
+class Iter:
+    def __init__(self, objs):
+        self.objs = objs
+        self.index = 0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.index >= len(self.objs):
+            raise StopIteration
+        value = self.objs[self.index]
+        index = self.index
+        self.index += 2
+        return index, value
+print("\n")
+print("自作のクラスでイテレータを実装")
+print("nextメソッドはイテレータを２個進める")
+iter = Iter(['Spring', 'Summer', 'Fall', 'Winter'])
+
+for i in iter:
+    print(i)
+
+
+
 
 
 
